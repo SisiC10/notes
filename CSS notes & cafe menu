@@ -1,0 +1,21 @@
+*You can add style to an element by specifying it in the style element and setting a property for it like this:
+element {
+ property: value;
+}
+
+EXAMPLE;
+<style>
+      h1, h2, p {
+        text-align: center;
+      }
+    </style>
+
+*a seperate folder is used for the style ('style.css) so its not in with the html code. <style></style> is taken out. Instead we reference style.css:
+<link href="styles.css" rel="stylesheet"/>
+
+*To make it look the same on a laptop and mobile phone:
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<div>: used for design layour purposes. Put after '<body>
+
+A class selector is defined by a name with a dot directly in front of it.

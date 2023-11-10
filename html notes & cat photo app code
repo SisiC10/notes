@@ -1,0 +1,98 @@
+HTML NOTES
+H1: webpage title
+H2,etc: headings
+<p></p>: beginning and end of paragraph
+<a>: inserts link 
+<img: photo insert
+target="_blank": opens link in seperate page
+href= "": link reference
+src="": photo reference
+<ul><</ul>: inserts unordered list
+<ol></ol>: ordered list
+<li></li>: parts of list
+<figure></figure>: nests; allows for captions
+<figcaption></figcaption>: img caption
+<em></em>: emphasizes (italics)
+<strong></strong>: bolds text
+<form></form>:
+<input:
+type="": 
+name="":
+required: so another form cannot be submitted 
+<button></button>: clickable button
+**you can add a type attribute for clearification
+<label></label>:
+id="":
+value="":
+<fieldset></fieldset>: nests; groups rekated inputs and labeks them together in web form.
+legend="": within fieldset for context
+checked: put after '<input' to check the first radio/checkbox by default.
+lang="en": put after <html to say the language
+<!DOCTYPE html>: all pages should bein w this, it's known as a declaration and ensures the browser tries to meet industry-wide specifications.
+<meta: set's browser behaviour, ex. putting charset="UTF-8" tells the browser to parse the markup into multiple language.
+**only those in <main></main>: get displayed. everything else is not.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta attribute="value" charset="UTF-8">
+    <title>CatPhotoApp</title>
+</head>
+<body>
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
